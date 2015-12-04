@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E909B318-0A9A-4101-8BEF-9A3589FF90E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>simulated_annealing_group_project</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="TSP\bin\Debug\TSP.exe" />
+    <Content Include="TSP\bin\Debug\TSP.pdb" />
+    <Content Include="TSP\bin\Debug\TSP.vshost.exe" />
+    <Content Include="TSP\obj\Debug\index.html" />
+    <Content Include="TSP\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="TSP\obj\Debug\TSP.csproj.FileListAbsolute.txt" />
+    <Content Include="TSP\obj\Debug\TSP.exe" />
+    <Content Include="TSP\obj\Debug\TSP.pdb" />
+    <Content Include="TSP\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="TSP\obj\Release\TSP.csproj.FileListAbsolute.txt" />
+    <Content Include="TSP\obj\TSP.csproj.FileList.txt" />
+    <Content Include="TSP\TSP.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\06\c24d06c1cab750788146ce052b37770f3fa530" />
+    <None Include=".git\objects\0f\a709be88b7743801ca27044b67ab340c9dda28" />
+    <None Include=".git\objects\20\358ceb33cdc1cbd27ccdf5498f5cfaeacd13d1" />
+    <None Include=".git\objects\2a\02d9e96383ff54958d06818688956840c27e32" />
+    <None Include=".git\objects\2b\64791154dedea2a3b1008820d76069494c47f9" />
+    <None Include=".git\objects\2d\4a71b3405a1b3f761c0963b8964e372cf22fa9" />
+    <None Include=".git\objects\33\68d2588fd5f3b1024a083b8b7081eac4cc47fb" />
+    <None Include=".git\objects\39\645652af62950ebf3b28ec3a5400dcec30b1c4" />
+    <None Include=".git\objects\3a\ae7a35ec627d1d95d35b189fcad5e4c46a9699" />
+    <None Include=".git\objects\51\f8db85b26292090d3d42c08abbdb058e33fc95" />
+    <None Include=".git\objects\5f\68482fa8a5b45696efcab1144fd114584f0e0f" />
+    <None Include=".git\objects\62\57fcf9fc90f3add6a8ea068c556ace89ee6a35" />
+    <None Include=".git\objects\6e\159658895a5a372dd763776d27c741b26964da" />
+    <None Include=".git\objects\6e\7adba48b29d0d888ccbda37484a4b2edc6ba1b" />
+    <None Include=".git\objects\6f\a7c1e0bf6153313b06e766812139d795bf4d91" />
+    <None Include=".git\objects\72\5ba3b4e1f0e20c2b7014f1d79c596f2cc7346d" />
+    <None Include=".git\objects\73\8bb93e19c76af06312147ee61aad82a6125c3d" />
+    <None Include=".git\objects\7b\a8af382b3aa566723346982ac1a78e3639ce8f" />
+    <None Include=".git\objects\82\680bd8bcd9408bdbdc45b4b9bb22f4ada1c3ce" />
+    <None Include=".git\objects\96\1b6ef25652758d49aa4dda2cf31adcb385d142" />
+    <None Include=".git\objects\98\fe433459220c7d78502386f48bf9775801e92b" />
+    <None Include=".git\objects\9b\f8794b8705624e459af2ffebca1ea10fe08902" />
+    <None Include=".git\objects\a8\d4fe3557c1f4647dcfae9dcc912e608dbe66ef" />
+    <None Include=".git\objects\ac\1bb165aa7fb741c06aafa1b9d5e23e4aac89f7" />
+    <None Include=".git\objects\ad\8d13c7ebb21da34ec86d13a910519d2777a6ab" />
+    <None Include=".git\objects\ad\b36c821965862397d65fa68e26cd2433c97140" />
+    <None Include=".git\objects\af\7dbebbacef595e3089c01c05671016c21a8304" />
+    <None Include=".git\objects\b9\9a17b91cc4face83ed2688743ff2b34a87d1d6" />
+    <None Include=".git\objects\bc\2b832b44f83fe741a3b9d59579e353f8017fa8" />
+    <None Include=".git\objects\c0\14d2d3fab33dfa4920d5c9577566bd4495f4d0" />
+    <None Include=".git\objects\c0\f0fb228ed1cd34913153d07caa2f04bfbe0252" />
+    <None Include=".git\objects\c5\e91e38f67da6dfc8212b1541b14606eb74cf41" />
+    <None Include=".git\objects\cb\9598072aebed3a416460971cc57973e1bea548" />
+    <None Include=".git\objects\cd\948e3154bfad9812ece1c9c832e3c6cbe791d5" />
+    <None Include=".git\objects\cd\a6d3d95ec356ee71eab5cf634989f159e8d6d9" />
+    <None Include=".git\objects\cd\c1eb1c363d0d3096561f5cd6fe9aeb46e6a320" />
+    <None Include=".git\objects\cf\368e16781dcb133253a0d8eb49ed858784f41a" />
+    <None Include=".git\objects\d2\c6cd2e650160e4c28538f8f080aef211513a4c" />
+    <None Include=".git\objects\d4\d3fef35ea0c22dbdb97d2fd633874063607044" />
+    <None Include=".git\objects\da\4e65345953262b623b785fe56e3c3887e58c93" />
+    <None Include=".git\objects\da\dad8ee5448d8b534f97486a91ebb287e8d27a5" />
+    <None Include=".git\objects\dc\473d8a28e3b642bbc28fda6a6a6bce75e06b69" />
+    <None Include=".git\objects\ea\34188b755bf0a090eef903f55bfb2b1b23995c" />
+    <None Include=".git\objects\ef\9770d5e32b3df2073b2c1ee7d1a1b7386bd4f5" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include="README.md" />
+    <None Include="TSP\obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="TSP\obj\Debug\TSP.csproj.GenerateResource.Cache" />
+    <None Include="TSP\obj\Release\TSP.csproj.GenerateResource.Cache" />
+    <None Include="TSP\Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TSP\City.cs" />
+    <Compile Include="TSP\data.cs" />
+    <Compile Include="TSP\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TSP\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TSP\GreedySolver.cs" />
+    <Compile Include="TSP\HardMode.cs" />
+    <Compile Include="TSP\ProblemAndSolver.cs" />
+    <Compile Include="TSP\Program.cs" />
+    <Compile Include="TSP\Properties\AssemblyInfo.cs" />
+    <Compile Include="TSP\Properties\Resources.Designer.cs" />
+    <Compile Include="TSP\Properties\Settings.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TSP\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TSP\obj\Debug\TSP.mainform.resources" />
+    <EmbeddedResource Include="TSP\obj\Debug\TSP.Properties.Resources.resources" />
+    <EmbeddedResource Include="TSP\obj\Release\TSP.Form1.resources" />
+    <EmbeddedResource Include="TSP\obj\Release\TSP.Properties.Resources.resources" />
+    <EmbeddedResource Include="TSP\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\branches\" />
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="TSP\bin\Release\" />
+    <Folder Include="TSP\obj\Debug\Refactor\" />
+    <Folder Include="TSP\obj\Release\Refactor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

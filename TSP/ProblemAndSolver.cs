@@ -301,6 +301,12 @@ namespace TSP
             Program.MainForm.Invalidate();
 
         }
+
+        public void solveWithGreedy() {
+            bssf = new TSPSolution(GreedySolver.solve(Cities));
+            Program.MainForm.tbCostOfTour.Text = " " + bssf.costOfRoute();
+            Program.MainForm.Invalidate();
+        }
         #endregion
     }
 

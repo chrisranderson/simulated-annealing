@@ -157,7 +157,7 @@ namespace TSP
         private void greedyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // TODO: Add a hook into your own implementation here.
-            throw new NotImplementedException();
+            CityData.solveWithGreedy();
         }
 
         private void bBToolStripMenuItem_Click(object sender, EventArgs e)

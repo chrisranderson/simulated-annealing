@@ -1,0 +1,8 @@
+C:\school-projects\simulated-annealing\bin\Debug\WindowsApplication.exe
+C:\school-projects\simulated-annealing\bin\Debug\WindowsApplication.pdb
+C:\school-projects\simulated-annealing\obj\x86\Debug\simulated annealing group project.csprojResolveAssemblyReference.cache
+C:\school-projects\simulated-annealing\obj\x86\Debug\TSP.mainform.resources
+C:\school-projects\simulated-annealing\obj\x86\Debug\simulated_annealing_group_project.TSP.Properties.Resources.resources
+C:\school-projects\simulated-annealing\obj\x86\Debug\simulated annealing group project.csproj.GenerateResource.Cache
+C:\school-projects\simulated-annealing\obj\x86\Debug\WindowsApplication.exe
+C:\school-projects\simulated-annealing\obj\x86\Debug\WindowsApplication.pdb

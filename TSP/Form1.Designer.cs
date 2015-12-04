@@ -193,7 +193,7 @@ namespace TSP
             // 
             this.yourTSPToolStripMenuItem1.Name = "yourTSPToolStripMenuItem1";
             this.yourTSPToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
-            this.yourTSPToolStripMenuItem1.Text = "Your TSP";
+            this.yourTSPToolStripMenuItem1.Text = "simulated annealing";
             this.yourTSPToolStripMenuItem1.Click += new System.EventHandler(this.yourTSPToolStripMenuItem1_Click);
             // 
             // randomToolStripMenuItem1
@@ -207,14 +207,14 @@ namespace TSP
             // 
             this.bBToolStripMenuItem.Name = "bBToolStripMenuItem";
             this.bBToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.bBToolStripMenuItem.Text = "B and B";
+            this.bBToolStripMenuItem.Text = "branch and bound";
             this.bBToolStripMenuItem.Click += new System.EventHandler(this.bBToolStripMenuItem_Click);
             // 
             // greedyToolStripMenuItem
             // 
             this.greedyToolStripMenuItem.Name = "greedyToolStripMenuItem";
             this.greedyToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.greedyToolStripMenuItem.Text = "Greedy";
+            this.greedyToolStripMenuItem.Text = "greedy";
             this.greedyToolStripMenuItem.Click += new System.EventHandler(this.greedyToolStripMenuItem_Click);
             // 
             // newProblem
@@ -274,7 +274,7 @@ namespace TSP
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "mainform";
-            this.Text = "Traveling Sales Person";
+            this.Text = "Traveling Sales Person Solver Extreme 2000";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.Resize += new System.EventHandler(this.Form1_Resize);
