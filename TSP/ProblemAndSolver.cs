@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using simulated_annealing_group_project;
 
 namespace TSP
 {
@@ -304,6 +305,12 @@ namespace TSP
 
         public void solveWithGreedy() {
             bssf = new TSPSolution(GreedySolver.solve(Cities));
+            Program.MainForm.tbCostOfTour.Text = " " + bssf.costOfRoute();
+            Program.MainForm.Invalidate();
+        }
+
+        public void solveWithSimulatedAnnealing() {
+            bssf = new TSPSolution(new SimulatedAnnealingSolver().solve(Cities));
             Program.MainForm.tbCostOfTour.Text = " " + bssf.costOfRoute();
             Program.MainForm.Invalidate();
         }

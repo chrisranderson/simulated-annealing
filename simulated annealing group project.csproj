@@ -34,6 +34,9 @@
     <RootNamespace>simulated_annealing_group_project</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OxyPlot">
+      <HintPath>packages\OxyPlot.Core.1.0.0-unstable1886\lib\net40-client\OxyPlot.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -127,6 +130,7 @@
     <None Include=".git\refs\heads\master" />
     <None Include=".git\refs\remotes\origin\HEAD" />
     <None Include=".git\refs\remotes\origin\master" />
+    <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="TSP\obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="TSP\obj\Debug\TSP.csproj.GenerateResource.Cache" />
@@ -134,6 +138,8 @@
     <None Include="TSP\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SimulatedAnnealingSolver.cs" />
+    <Compile Include="Tour.cs" />
     <Compile Include="TSP\City.cs" />
     <Compile Include="TSP\data.cs" />
     <Compile Include="TSP\Form1.cs">

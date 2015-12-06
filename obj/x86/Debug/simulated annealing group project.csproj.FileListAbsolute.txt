@@ -6,3 +6,6 @@ C:\school-projects\simulated-annealing\obj\x86\Debug\simulated_annealing_group_p
 C:\school-projects\simulated-annealing\obj\x86\Debug\simulated annealing group project.csproj.GenerateResource.Cache
 C:\school-projects\simulated-annealing\obj\x86\Debug\WindowsApplication.exe
 C:\school-projects\simulated-annealing\obj\x86\Debug\WindowsApplication.pdb
+C:\school-projects\simulated-annealing\bin\Debug\OxyPlot.dll
+C:\school-projects\simulated-annealing\bin\Debug\OxyPlot.pdb
+C:\school-projects\simulated-annealing\bin\Debug\OxyPlot.xml
