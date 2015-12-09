@@ -14,7 +14,7 @@ class SimulatedAnnealingSolver {
     public string log = "";
     public double TEMP_INTERVAL = -.4;
     public int SWAP_COUNT = 3;
-    public double TEMPERATURE_START_MULT = 2;
+    public double TEMPERATURE_START_MULT = .5;
     public Stopwatch timer = new Stopwatch();
     public int TIME_LIMIT = 30;
 
@@ -50,20 +50,30 @@ class SimulatedAnnealingSolver {
         // stop searching after a certain amount of changes
         timer.Start();
 
-            for (int numSwaps = getMinSwaps(cities.Count()); 
-                     numSwaps < getMaxSwaps(cities.Count()); numSwaps += 1) {
+       
+
+            for (int numSwaps = 3; numSwaps < 6; numSwaps += 1) {
                 currentTour = getInitialTour(cities);
 
+                int stepCount = 0;
+                int totalIterations = 0;
+                var lastSave = 0;
                 // We need to figure out what this should actually be.
                 double temperature = currentTour.getEnergy()*TEMPERATURE_START_MULT;
+                //double temperature = 200;
                 //debug("initial temp", temperature);
-                while (temperature > 0) {
+                while (temperature > .01) {
+                    totalIterations++;
+                    stepCount++;
+
                     if (timer.Elapsed.TotalSeconds > TIME_LIMIT) {
-                        break;
+                        //break;
                     }
                     //debug("================");
-                    temperature = (temperature * .95);
+                    temperature = (temperature * .9999);
+                    //temperature = (initialTemp / Math.Log10(totalIterations)) - (initialTemp / 7);
                     //temperature = getTemperature(temperature, .5);
+                    numSwaps = (int) Math.Max(Math.Floor(Math.Sqrt(temperature)), 1);
                     var neighbor = getNeighbor(currentTour, numSwaps);
                     var currentEnergy = currentTour.getEnergy();
                     var neighborEnergy = neighbor.getEnergy();
@@ -74,17 +84,20 @@ class SimulatedAnnealingSolver {
                         currentTour = neighbor;
                         updatedTours.Add(neighborEnergy);
                         if (neighborEnergy < mimimumTour) {
-                            debug("timer", timer.Elapsed.TotalSeconds);
-                            timer.Restart();
+                            lastSave = stepCount;
+                            stepCount = 0;
                             bestTour = currentTour;
                             mimimumTour = neighborEnergy;
                             debug("==== IMPROVED ====");
+                            debug("timer", timer.Elapsed.TotalSeconds);
+                            debug("step count", lastSave);
                             debug("tour length", neighborEnergy);
                             debug("temp interval", interval);
                             debug("number of swaps", numSwaps);
+                            timer.Restart();
                         }
                     } else {
-                        temperature = temperature + .5;
+                        //temperature *= 1.01;
                     }
                 }
 
@@ -133,6 +146,8 @@ class SimulatedAnnealingSolver {
             swapRandomWithAdjacent(output);
         }
 
+        //wesAlgorithm(output);
+
         //var longestEdge = output.getLongestEdge();
         //swapLongestEdgeCitiesWithRandom(output, longestEdge);
         //longestEdge = output.getLongestEdge();
@@ -141,6 +156,25 @@ class SimulatedAnnealingSolver {
         //swapLongestEdgeCitiesWithRandom(output, longestEdge);
        
         return output;
+    }
+
+    public int circularIndex(int index, int size) {
+        if (index >= 0) {
+            return index % size;
+        } else {
+            return index + size;
+        }
+    }
+
+    public void wesAlgorithm(Tour tour) {
+        var size = tour.cities.Count();
+        var swapCityLocation = rand.Next(0, size);
+        var loopSize = rand.Next(1, 5);
+
+        for (int i = 1; i <= loopSize; i++) {
+            tour.swapCities(circularIndex(swapCityLocation + i, size), 
+                            circularIndex(swapCityLocation - i, size));
+        }
     }
 
     public void swapTwoRandomCities(Tour tour) {
